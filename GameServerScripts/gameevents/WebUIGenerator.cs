@@ -42,14 +42,14 @@ namespace DOL.GS.Scripts
 		public static void OnScriptLoaded(DOLEvent e, object sender, EventArgs args)
 		{
 			//Uncomment the following line to enable the WebUI
-			//Start();
+			Start();
 		}
 
 		[ScriptUnloadedEvent]
 		public static void OnScriptUnloaded(DOLEvent e, object sender, EventArgs args)
 		{
 			//Uncomment the following line to enable the WebUI
-			//Stop();
+			Stop();
 		}
 
 		/// <summary>
