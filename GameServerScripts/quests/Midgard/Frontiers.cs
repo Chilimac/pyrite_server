@@ -316,7 +316,7 @@ namespace DOL.GS.Quests.Midgard
 			{
 				griffin = new GameNPC();
 				griffin.Model = 1236; // //819;
-                griffin.Name = "tamed gryphon";
+                griffin.Name = LanguageMgr.GetTranslation(ServerProperties.Properties.SERV_LANGUAGE, "Mid.Frontiers.NPCGryphon");
 
 				if (log.IsWarnEnabled)
 					log.Warn("Could not find " + griffin.Name + ", creating ...");
