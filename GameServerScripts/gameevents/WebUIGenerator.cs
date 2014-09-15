@@ -472,10 +472,23 @@ namespace DOL.GS.Scripts
 				WebUIDir root = new WebUIDir();
 				root.m_path = "."+Path.DirectorySeparatorChar+"webui"+Path.DirectorySeparatorChar+"template";
 
+                //If the webui dir doesn't exist, create it for first time use
 				if (!Directory.Exists("."+Path.DirectorySeparatorChar+"webui"))
 				{
 					Directory.CreateDirectory("."+Path.DirectorySeparatorChar+"webui");
 				}
+
+                //If the webui dir exists, but was just created, or somone has remove the template dir manually, (re)create it
+                if (!Directory.Exists("." + Path.DirectorySeparatorChar + "webui" + Path.DirectorySeparatorChar + "template"))
+                {
+                    Directory.CreateDirectory("." + Path.DirectorySeparatorChar + "webui" + Path.DirectorySeparatorChar + "template");
+                }
+
+                //Do the same for the generated dir for robustness
+                if (!Directory.Exists("." + Path.DirectorySeparatorChar + "webui" + Path.DirectorySeparatorChar + "generated"))
+                {
+                    Directory.CreateDirectory("." + Path.DirectorySeparatorChar + "webui" + Path.DirectorySeparatorChar + "generated");
+                }
 
 				ParseDirectory(root);
 

@@ -105,6 +105,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountVaultKeeper.cs" />
+    <Compile Include="ArtifactsWeaponMerchantTemplate.cs" />
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -121,6 +123,10 @@
     <Compile Include="customnpc\TownCrier.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Dragonslayer Merchants %28BPs%29.cs" />
+    <Compile Include="Dragonslayer Merchants %28DragonSworn Badges%29.cs" />
+    <Compile Include="DragonswornLootgen.cs" />
+    <Compile Include="DragonSwornMerchant.cs" />
     <Compile Include="examples\CustomInventoryLoggingExample.cs" />
     <Compile Include="gameevents\DOLTestServer.cs" />
     <Compile Include="gameevents\StartupGuilds.cs" />
@@ -152,6 +158,7 @@
     <Compile Include="gameevents\XMLWebUIGenerator.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GuildVaultKeeper.cs" />
     <Compile Include="quests\Albion\AFewRepairs.cs" />
     <Compile Include="quests\Albion\AfterTheAccident.cs" />
     <Compile Include="quests\Albion\AgainstTheGrain.cs" />
@@ -262,6 +269,8 @@
     <PreBuildEvent>
     </PreBuildEvent>
     <PostBuildEvent>xcopy "$(ProjectDir)*.cs" "$(ProjectDir)..\$(ConfigurationName)\scripts" /y /s /q /i
+xcopy "$(ProjectDir)..\WebUITemplates\*.htm" "$(ProjectDir)..\$(ConfigurationName)\webui\template" /y /s /q /i
+
 </PostBuildEvent>
   </PropertyGroup>
   <!-- Graveen: the following is replacing the rev number in the asembly.info file by the SVN rev number of the current project. -->
