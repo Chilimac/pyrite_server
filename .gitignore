@@ -8,7 +8,8 @@
 /debug
 /no_versionning
 /obj
-/release
+/release/*.config
+/release/*.dll
 /Dawn of Light - Working.sln
 /Dawn of Light.sln.cache
 /desktop.ini
